@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --background-color: #19a1ae;
+  --primary-color: #2e3349;
+  --secondary-color: #6b7082;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -22,6 +28,98 @@ a {
 }
 
 body {
-  margin: 0;
-  background-image: url(../assets/images/sleep-cat.jpeg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 375px;
+  overflow: hidden;
+  background-color: var(--background-color);
+  font-family: 'Kumbh Sans', sans-serif;
+}
+.background-image-top {
+  position: absolute;
+  top: -300px;
+  left: -350px;
+}
+.background-image-bottom {
+  position: absolute;
+  bottom: -300px;
+  right: -350px;
+}
+
+.main-container {
+  position: relative;
+  text-align: center;
+}
+
+.card-top {
+  background-image: url(../assets/images/bg-pattern-card.svg);
+  height: 149px;
+  width: 373px;
+  border-radius: 15px 15px 0 0;
+}
+.card-data {
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+  padding-top: 72px;
+}
+.card-data__image {
+  position: absolute;
+  left: 130px;
+  top: 100px;
+  width: 96px;
+  height: 96px;
+  border: 7px solid white;
+  border-radius: 50%;
+}
+.card-data__user {
+  margin-bottom: 8px;
+}
+.card-data__name {
+  margin-right: 9.5px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.card-data__age {
+  font-size: 18px;
+  color: var(--secondary-color);
+}
+.card-data__city {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: var(--secondary-color);
+}
+.card-info {
+  border-top: 1px solid #979797;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 52px 24px 41px;
+}
+
+.card-data__number {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-data__text {
+  color: var(--secondary-color);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+@media screen and (min-width: 768px) {
+  .background-image-top {
+    position: absolute;
+    top: -500px;
+    left: 0;
+  }
+  .background-image-bottom {
+    position: absolute;
+    bottom: -500px;
+    right: 0;
+  }
 }
